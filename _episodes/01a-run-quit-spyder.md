@@ -1,193 +1,141 @@
 ---
-title: "Running and Quitting using JupyterLab"
+title: "Running and Quitting using Spyder"
 teaching: 15
 exercises: 0
 questions:
-- "How can I run Python programs using JypyterLab?"
+- "What is an IDE?"
+- "How can I run Python programs using Spyder?"
 objectives:
-- "Launch the JupyterLab server." 
+- "Launch Spyder." 
+- "Understand what an IDE is."
 - "Create a new Python script." 
-- "Create a Jupyter notebook."
-- "Shutdown the JupyterLab server."
-- "Understand the difference between a Python script and a Jupyter notebook."
-- "Create Markdown cells in a notebook."
-- "Create and run Python cells in a notebook."
+- "Create and run cells in a Python script."
+- "Run a Python script outside of the IDE."
 keypoints:
 - "Python scripts are plain text files."
-- "Use the Jupyter Notebook for editing and running Python."
-- "The Notebook has Command and Edit modes."
+- "Use the Spyder IDE for editing and running Python."
 - "Use the keyboard and mouse to select and edit cells."
-- "The Notebook will turn Markdown into pretty-printed documentation."
-- "Markdown does most of what HTML does."
+- "Scripts written in Spyder can be run from the command line."
 ---
 
-Many software developers will often use an integrated development environment (IDE) or a 
-text editor to create and edit their Python programs which can be executed through the IDE or command line directly. While this is a common approach, we are going to use the [Jupyter Notebook][jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop.
+Many software developers will often use an integrated development environment (IDE) or a text editor to create and edit their Python programs which can be executed through the IDE or command line directly. 
+
+[Spyder](https://www.spyder-ide.org) (Scientific Python Development Environment) is a free IDE written in Python that comes with Anaconda. Editing, interactive testing, debugging, and introspection tools are all included in Spyder. 
 
 This has several advantages:
-  *   You can easily type, edit, and copy and paste blocks of code.
+  *   You will become familiar with using an IDE.
   *   Tab complete allows you to easily access the names of things you are using
       and learn more about them.
-  *   It allows you to annotate your code with links, different sized text, bullets, etc.
-      to make it more accessible to you and your collaborators.
-  *   It allows you to display figures next to the code that produces them
-      to tell a complete story of the analysis.
+  *   You will be able to run your code as you create it and see results within the one interface.
+  *   You will be able to easily run you scripts from the command line after you have finished writing them..
 
-Each notebook contains one or more cells that contain code, text, or images.
+Each file can contain one or more cells that contain code and comments (documentation).
 
-## Getting Started with JupyterLab
+In this workshop, we will use Spyder to understand the fundamentals of programming with Python. We will also undertake various plotting exercises for our dataset.
 
-JupyterLab is an application with a web-based user interface from [Project Jupyter][jupyter] that 
-enables one to work with documents and activities such as Jupyter notebooks, text editors, terminals,
-and even custom components in a flexible, integrated, and extensible manner. JupyterLab requires a
-reasonably up-to-date browser (ideally a current version of Chrome, Safari, or Firefox); Internet
-Explorer versions 9 and below are *not* supported.
+> ## First steps with Spyder
+> 
+> If you are new to Spyder, we highly recommend watching this set of informative
+> videos, [Spyder Tutorials](https://youtu.be/E2Dap5SfXkI). Each video is about 3.5
+> minutes long.
+> 
+{: .callout}
 
-JupyterLab is included as part of the Anaconda Python distribution. If you have not already
+## Getting Started with Spyder
+
+Spyder is included as part of the Anaconda Python distribution. If you have not already
 installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}{% link
 setup.md %})
 for installation instructions.
 
-Even though JupyterLab is a web-based application, JupyterLab runs locally on your machine and 
-does not require an internet connection.
-*   The JupyterLab server sends messages to your web browser.
-*   The JupyterLab server does the work and the web browser renders the result.
-*   You will type code into the browser and see the result when the web page talks to the 
-    JupyterLab server.
+## Starting Spyder
 
-> ## JupyterLab? What about Jupyter notebooks?
-> 
-> JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview).
-> If you have prior experience working with Jupyter notebooks, then you will have a good idea of what to expect from JupyterLab. 
-> 
-> Experienced users of Jupyter notebooks interested in a more detailed discussion of the similarities and differences
-> between the JupyterLab and Jupyter notebook user interfaces can find more information in the 
-> [JupyterLab user interface documentation][jupyterlab-ui].
-{: .callout}
-
-## Starting JupyterLab
-
-You can start the JupyterLab server through the command line or through an application called 
+You can start the Spyder IDE through the command line or through an application called 
 `Anaconda Navigator`. Anaconda Navigator is included as part of the Anaconda Python distribution.
 
 ### macOS - Command Line
-To start the JupyterLab server you will need to access the command line through the Terminal. 
+To start Spyder IDE you will need to access the command line through the Terminal. 
 There are two ways to open Terminal on Mac.
 
 1. In your Applications folder, open Utilities and double-click on Terminal
 2. Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Terminal` and then 
 double-click the search result or hit <kbd>Enter</kbd>
 
-After you have launched Terminal, type the command to launch the JupyterLab server.
+After you have launched Terminal, type the command to launch the Spyder IDE.
 
 ~~~
-$ jupyter lab
+$ spyder
 ~~~
-{: .bash}
+{: .language-bash}
 
 ### Windows Users - Command Line
-To start the JupyterLab server you will need to access the Anaconda Prompt.
+To start the Spyder IDE you will need to access the Anaconda Prompt.
 
 Press <kbd>Windows Logo Key</kbd> and search for `Anaconda Prompt`, click the result or press enter.
 
 After you have launched the Anaconda Prompt, type the command:
 
 ~~~
-$ jupyter lab
+$ spyder
 ~~~
-{: .bash}
+{: .source}
 
 ###  Anaconda Navigator
 
-To start a JupyterLab server from Anaconda Navigator you must first [start Anaconda Navigator (click for detailed instructions on macOS, Windows, and Linux)](https://docs.anaconda.com/anaconda/navigator/getting-started/#starting-navigator). You can search for Anaconda Navigator via Spotlight on macOS (<kbd>Command</kbd> + <kbd>spacebar</kbd>), the Windows search function (<kbd>Windows Logo Key</kbd>) or opening a terminal shell and executing the `anaconda-navigator` executable from the command line.
+To start a Spyder IDE from Anaconda Navigator you must first [start Anaconda Navigator (click for detailed instructions on macOS, Windows, and Linux)](https://docs.anaconda.com/anaconda/navigator/getting-started/#starting-navigator). You can search for Anaconda Navigator via Spotlight on macOS (<kbd>Command</kbd> + <kbd>spacebar</kbd>), the Windows search function (<kbd>Windows Logo Key</kbd>) or opening a terminal shell and executing the `anaconda-navigator` executable from the command line.
 
-After you have launched Anaconda Navigator, click the `Launch` button under JupyterLab. You may need
+After you have launched Anaconda Navigator, click the `Launch` button under Spyder. You may need
 to scroll down to find it.
 
 Here is a screenshot of an Anaconda Navigator page similar to the one that should open on either macOS
 or Windows.
 
 <p align='center'>
-  <img alt="Anaconda Navigator landing page" src="../fig/0_anaconda_navigator_landing_page.png" width="750"/>
+  <img alt="Anaconda Navigator landing page" src="../fig/0_anaconda_navigator_landing_page_spyder.png" width="750"/>
 </p>
 
-And here is a screenshot of a JupyterLab landing page that should be similar to the one that opens in your 
-default web browser after starting the JupyterLab server on either macOS or Windows.
+## The Spyder IDE Interface
+
+You will see a toolbar and 3 panes when you first open Spyder. Working clockwise, the 3 panes are:
+
+* Editor, 
+* Help, Variable Explorer, Plots, Files, and 
+* the IPython Console.
 
 <p align='center'>
-  <img alt="JupyterLab landing page" src="../fig/0_jupyterlab_landing_page.png" width="750"/>
+  <img alt="Spyder IDE default layout" src="../fig/0_spyder_ide_layout.png" width="750"/>
 </p>
 
-## The JupyterLab Interface
+<p style="background-color:yellow"> Maybe redo the screen shot to include the toolbar rather than the menu and include the Variable Explorer etc pane. Resolution looks a bit low but that could be a result of the embedding in the Word document.  </p>
 
-JupyterLab has many features found in traditional integrated development environments (IDEs) but 
-is focused on providing flexible building blocks for interactive, exploratory computing.
+The menu on Macs is the same with the usual macOS variations, e.g., `Preferences` can be found under the Code menu item rather than <span style="background-color:yellow"> whereever it is in Windows </span>.
 
-The [JupyterLab Interface](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) 
-consists of the Menu Bar, a collapsable Left Side Bar, and the Main Work Area which contains tabs 
-of documents and activities.
+### Editor (left panel)
+* The Editor pane is where we can view and write our Python code.
+* We can use the toolbar or menu to create, open and save files containing Python code in the editor.
+* In the Editor pane you will get syntax highlighting, on-demand completion and other helpful features.
 
-### Menu Bar
+### Variable Explorer, Help, Plots and Files (top right panel)
+This panel has 4 tabs by default.
+* **Variable Explorer** shows the values of all of the variables you create by running Python code.
+* **Help**, help information requested from the Editor or IPython pane is displayed here.
+* **Plots**, plots created by running code are displayed here.
+* **Files** displays and Explorer/Finder view so that you can easily see where your files are.
 
-The Menu Bar at the top of JupyterLab has the top-level menus that expose various actions 
-available in JupyterLab along with their keyboard shortcuts (where applicable). The following 
-menus are included by default.
+### IPython Console (bottom right)
+This pane has 2 tabs; IPython console and History, by default.
+* **IPython console** is an interactive contole/terminal which displays the content output by your code. You can also run Python commands in it interactively, separately from your code.
+* **History** displays a list of commands that you have typed into the Console or run from the Editor.
 
-*   **File:** Actions related to files and directories such as *New*, *Open*, *Close*, *Save*, etc. The *File* menu also includes the *Shut Down* action used to shutdown the JupyterLab server.
-*   **Edit:** Actions related to editing documents and other activities such as *Undo*, *Cut*, *Copy*, *Paste*, etc.
-*   **View:** Actions that alter the appearance of JupyterLab.
-*   **Run:** Actions for running code in different activities such as notebooks and code consoles (discussed below).
-*   **Kernel:** Actions for managing kernels. Kernels in Jupyter will be explained in more detail below.
-*   **Tabs:** A list of the open documents and activities in the main work area.
-*   **Settings:** Common JupyterLab settings can be configured using this menu. There is also an *Advanced Settings Editor* option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options.
-*   **Help:** A list of JupyterLab and kernel help links.
-
-> ## Kernels
-> The JupyterLab [docs](https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html) 
-> define kernels as "separate processes started by the server that run your code in different programming languages and environments."
-> When we open a Jupyter Notebook, that starts a kernel - a process - that is going to run the code. 
-> In this lesson, we'll be using the Jupyter ipython kernel which lets us run Python 3 code interactively.
+> ##  Spyder IDE Documentation
 > 
-> Using other Jupyter [kernels for other programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) would let us 
-> write and execute code in other programming languages in the same JupyterLab interface, like R, Java, Julia, Ruby, JavaScript, Fortran, 
-> etc.
+> More information on the Spyder IDE can be found at [spyder docs](https://docs.spyder-ide.org/current/index.html). 
 > 
 {: .callout}
 
-A screenshot of the default Menu Bar is provided below.
-
-<p align='center'>
-    <img alt="JupyterLab Menu Bar" src="../fig/0_jupyterlab_menu_bar.png" width="750"/>
+<p style="background-color:yellow;padding:2em">
+27-July-2022 Pauline got up to here
 </p>
-
-### Left Sidebar
-
-The left sidebar contains a number of commonly used tabs, such as a file browser (showing the 
-contents of the directory where the JupyterLab server was launched), a list of running kernels 
-and terminals, the command palette, and a list of open tabs in the main work area. A screenshot of 
-the default Left Side Bar is provided below.
-
-<p align='center'>
-    <img alt="JupyterLab Left Side Bar" src="../fig/0_jupyterlab_left_side_bar.png" width="250"/>
-</p>
-
-The left sidebar can be collapsed or expanded by selecting “Show Left Sidebar” in the View menu or 
-by clicking on the active sidebar tab.
-
-### Main Work Area
-
-The main work area in JupyterLab enables you to arrange documents (notebooks, text files, etc.) 
-and other activities (terminals, code consoles, etc.) into panels of tabs that can be resized or 
-subdivided. A screenshot of the default Main Work Area is provided below.
-
-<p align='center'>
-    <img alt="JupyterLab Main Work Area" src="../fig/0_jupyterlab_main_work_area.png" width="750"/>
-</p>
-
-Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide a tab panel by 
-dragging a tab to the left, right, top, or bottom of the panel. The work area has a single current 
-activity. The tab for the current activity is marked with a colored top border (blue by default).
-
 ## Creating a Python script
 
 *   To start writing a new Python program click the Text File icon under the *Other* header in the Launcher tab of the Main Work Area.
