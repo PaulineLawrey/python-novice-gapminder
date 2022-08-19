@@ -6,11 +6,9 @@ questions:
 - "What is an IDE?"
 - "How can I run Python programs using Spyder?"
 objectives:
-- "Launch Spyder." 
-- "Understand what an IDE is."
-- "Create a new Python script." 
-- "Create and run cells in a Python script."
-- "Run a Python script outside of the IDE."
+- "Launch Spyder" 
+- "Understand what an IDE is"
+- "Execute code from both the Editor and the Console"
 keypoints:
 - "Python scripts are plain text files."
 - "Use the Spyder IDE for editing and running Python."
@@ -108,7 +106,7 @@ You will see a toolbar and 3 panes when you first open Spyder. Working clockwise
 
 <p style="background-color:yellow"> Maybe redo the screen shot to include the toolbar rather than the menu and include the Variable Explorer etc pane. Resolution looks a bit low but that could be a result of the embedding in the Word document.  </p>
 
-The menu on Macs is the same with the usual macOS variations, e.g., `Preferences` can be found under the Code menu item rather than <span style="background-color:yellow"> whereever it is in Windows </span>.
+The menu on Macs is the same with the usual macOS variations, e.g., `Preferences` can be found under the Code menu item rather than under the Tools menu item as in Windows.
 
 ### Editor (left panel)
 * The Editor pane is where we can view and write our Python code.
@@ -118,8 +116,8 @@ The menu on Macs is the same with the usual macOS variations, e.g., `Preferences
 ### Variable Explorer, Help, Plots and Files (top right panel)
 This panel has 4 tabs by default.
 * **Variable Explorer** shows the values of all of the variables you create by running Python code.
-* **Help**, help information requested from the Editor or IPython pane is displayed here.
-* **Plots**, plots created by running code are displayed here.
+* **Help** help information requested from the Editor or IPython pane is displayed here.
+* **Plots** plots created by running code are displayed here.
 * **Files** displays and Explorer/Finder view so that you can easily see where your files are.
 
 ### IPython Console (bottom right)
@@ -136,387 +134,92 @@ This pane has 2 tabs; IPython console and History, by default.
 <p style="background-color:yellow;padding:2em">
 27-July-2022 Pauline got up to here
 </p>
-## Creating a Python script
 
-*   To start writing a new Python program click the Text File icon under the *Other* header in the Launcher tab of the Main Work Area.
-    *   You can also create a new plain text file by selecting the *New -> Text File* from the *File* menu in the Menu Bar.
-*   To convert this plain text file to a Python program, select the *Save File As* action from the *File* menu in the Menu Bar and give your new text file a name that ends with the `.py` extension.
-    *   The `.py` extension lets everyone (including the operating system) know that this text file is a Python program.
-    *   This is convention, not a requirement.
+## Running Programs in Spyder
 
-## Creating a Jupyter Notebook
+Before you run your program in Spyder, it is essential to know your working directory.You can find this by looking at the path next to the folder icon in the top right of the Help section. To select a different working directory you can click on the folder icon and choose a different one.
 
-To open a new notebook click the Python 3 icon under the *Notebook* header in the Launcher tab in 
-the main work area. You can also create a new notebook by selecting *New -> Notebook* from the *File* menu in the Menu Bar.
-
-Additional notes on Jupyter notebooks.
-
-  *   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
-  *   Notebooks can be exported as Python scripts that can be run from the command line.
-
-Below is a screenshot of a Jupyter notebook running inside JupyterLab. If you are interested in 
-more details, then see the [official notebook documentation][jupyterlab-notebook-docs].
-
-<p align='center'>
-    <img alt="Example Jupyter Notebook" src="../fig/0_jupyterlab_notebook_screenshot.png" width="750"/>
+<p style="background-color:yellow;padding:2em">
+Insert screen shot here working dir
 </p>
 
-> ## How It's Stored
->
-> *   The notebook file is stored in a format called JSON.
-> *   Just like a webpage, what's saved looks different from what you see in your browser.
-> *   But this format allows Jupyter to mix source code, text, and images, all in one file.
-{: .callout}
+We can run programs in Spyder in two ways: line by line or the entire code at the same time.
+*   Type F5 to run the entire program 
+*   Type Ctrl + Enter (in Windows) or Control + Enter (In Mac) to run code one line at a time.
 
-> ## Arranging Documents into Panels of Tabs
->
-> In the JupyterLab Main Work Area you can arrange documents into panels of tabs. Here is an 
-> example from the [official documentation][jupyterlab].
-> 
-> <p align='center'>
->    <img alt="Multi-panel JupyterLab" src="../fig/0_multipanel_jupyterlab_screenshot.png" width="750"/>
-> </p>
->
-> First, create a text file, Python console, and terminal window and arrange them into three 
-> panels in the main work area. Next, create a notebook, terminal window, and text file and 
-> arrange them into three panels in the main work area. Finally, create your own combination of 
-> panels and tabs. What combination of panels and tabs do you think will be most useful for your 
-> workflow?
->
-> > ## Solution
-> >
-> > After creating the necessary tabs, you can drag one of the tabs to the center of a panel to 
-> > move the tab to the panel; next you can subdivide a tab panel by dragging a tab to the left, 
-> > right, top, or bottom of the panel.
-> {: .solution}
-{: .challenge}
+Note: It is advisable to run the entire program as it helps in identifying and debugging errors easily.
 
-> ## Code vs. Text
->
-> Jupyter mixes code and text in different types of blocks, called cells. We often use the term
-> "code" to mean "the source code of software written in a language such as Python".
-> A "code cell" in a Notebook is a cell that contains software;
-> a "text cell" is one that contains ordinary prose written for human beings.
-{: .callout}
+Visit the [Spyder Key Combinations](https://keycombiner.com/collections/spyder/) web page for more keyboard shortcuts.
 
-## The Notebook has Command and Edit modes.
+## Sample Code Examples
 
-*   If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately, the outer border of your code cell will change from gray to blue.
-*   These are the **Command** (gray) and **Edit** (blue) modes of your notebook.
-*   Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
-*   When in Command mode (esc/gray),
-    *   The <kbd>b</kbd> key will make a new cell below the currently selected cell.
-    *   The <kbd>a</kbd> key will make one above.
-    *   The <kbd>x</kbd> key will delete the current cell.
-    *   The <kbd>z</kbd> key will undo your last cell operation (which could be a deletion, creation, etc).
-*   All actions can be done using the menus, but there are lots of keyboard shortcuts to speed things up.
-
-> ## Command Vs. Edit
->
-> In the Jupyter notebook page are you currently in Command or Edit mode?  
-> Switch between the modes. 
-> Use the shortcuts to generate a new cell. 
-> Use the shortcuts to delete a cell.
-> Use the shortcuts to undo the last cell operation you performed.
->
-> > ## Solution
-> >
-> > Command mode has a grey border and Edit mode has a blue border. 
-> > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>b</kbd> or <kbd>a</kbd>.
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>x</kbd>.
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>z</kbd>.
-> {: .solution}
-{: .challenge}
-
-### Use the keyboard and mouse to select and edit cells.
-
-*   Pressing the <kbd>Return</kbd> key turns the border blue and engages Edit mode, which allows 
-    you to type within the cell.
-*   Because we want to be able to write many lines of code in a single cell,
-    pressing the <kbd>Return</kbd> key when in Edit mode (blue) moves the cursor to the next line 
-    in the cell just like in a text editor.
-*   We need some other way to tell the Notebook we want to run what's in the cell.
-*   Pressing <kbd>Shift</kbd>+<kbd>Return</kbd> together will execute the contents of the cell.
-*   Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd> keys on the right of the keyboard are 
-    right next to each other.
-
-### The Notebook will turn Markdown into pretty-printed documentation.
-
-*   Notebooks can also render [Markdown][markdown].
-    *   A simple plain-text format for writing lists, links, 
-        and other things that might go into a web page.
-    *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
-*   Turn the current cell into a Markdown cell by entering the Command mode (<kbd>Esc</kbd>/gray) 
-    and press the <kbd>M</kbd> key.
-*   `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in 
-    Markdown.
-*   Turn the current cell into a Code cell by entering the Command mode (<kbd>Esc</kbd>/gray) and 
-    press the <kbd>y</kbd> key.
-
-### Markdown does most of what HTML does.
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
+## Assign values to variables, print the variable and get the type
 ~~~
-*   Use asterisks
-*   to create
-*   bullet lists.
+text = “Getting started with Spyder” # string
+print(text)
+type(text)
 ~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-*   Use asterisks
-*   to create
-*   bullet lists.
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-1.  Use numbers
-1.  to create
-1.  numbered lists.
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-
-1.  Use numbers
-1.  to create
-1.  numbered lists.
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-*  You can use indents
-	*  To create sublists 
-	*  of the same type
-*  Or sublists
-	1. Of different
-	1. types
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-*  You can use indents
-	*  To create sublists
-	*  of the same type
-*  Or sublists
-	1. Of different
-	1. types
-  
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-# A Level-1 Heading
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-# A Level-1 Heading
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-## A Level-2 Heading (etc.)
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-## A Level-2 Heading (etc.)
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-Line breaks
-don't matter.
-
-But blank lines
-create new paragraphs.
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-Line breaks
-don't matter.
-
-But blank lines
-create new paragraphs.
-
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6" markdown="1">
-    
-~~~
-[Create links](http://software-carpentry.org) with `[...](...)`.
-Or use [named links][data_carpentry].
-
-[data_carpentry]: http://datacarpentry.org
-~~~
-
-  </div>
-  <div class="col-md-6" markdown="1">
-  
-[Create links](http://software-carpentry.org) with `[...](...)`.
-Or use [named links][data_carpentry].
-
-[data_carpentry]: http://datacarpentry.org
-
-  </div>
-</div>
-
-> ## Creating Lists in Markdown
->
-> Create a nested list in a Markdown cell in a notebook that looks like this:
->
-> 1.  Get funding.
-> 2.  Do work.
->     *   Design experiment.
->     *   Collect data.
->     *   Analyze.
-> 3.  Write up.
-> 4.  Publish.
-> 
-> > ## Solution
-> >
-> > This challenge integrates both the numbered list and bullet list. 
-> > Note that the bullet list is indented 2 spaces so that it is inline with the items of the numbered list.
-> > ~~~
-> > 1.  Get funding.
-> > 2.  Do work.
-> >     *   Design experiment.
-> >     *   Collect data.
-> >     *   Analyze.
-> > 3.  Write up.
-> > 4.  Publish.
-> > ~~~
-> {: .solution}
-{: .challenge}
-
-> ## More Math
->
-> What is displayed when a Python cell in a notebook
-> that contains several calculations is executed?
-> For example, what happens when this cell is executed?
->
-> ~~~
-> 7 * 3
-> 2 + 1
-> ~~~
-> {: .language-python}
-> 
-> > ## Solution
-> >
-> > Python returns the output of the last calculation.
-> > ~~~
-> > 3
-> > ~~~
-> > {: .language-python}
-> {: .solution}
-{: .challenge}
-
-> ## Change an Existing Cell from Code to Markdown
->
-> What happens if you write some Python in a code cell
-> and then you switch it to a Markdown cell?
-> For example,
-> put the following in a code cell:
->
-> ~~~
-> x = 6 * 7 + 12
-> print(x)
-> ~~~
-> {: .language-python}
->
-> And then run it with <kbd>Shift</kbd>+<kbd>Return</kbd> to be sure that it works as a code cell.
-> Now go back to the cell and use <kbd>Esc</kbd> then <kbd>m</kbd> to switch the cell to Markdown
-> and "run" it with <kbd>Shift</kbd>+<kbd>Return</kbd>.
-> What happened and how might this be useful?
-> 
-> > ## Solution
-> >
-> > The Python code gets treated like Markdown text.
-> > The lines appear as if they are part of one contiguous paragraph.
-> > This could be useful to temporarily turn on and off cells in notebooks that get used for multiple purposes. 
-> > ~~~
-> > x = 6 * 7 + 12 print(x)
-> > ~~~
-> > {: .language-python}
-> {: .solution}
-{: .challenge}
-
-> ## Equations
->
-> Standard Markdown (such as we're using for these notes) won't render equations,
-> but the Notebook will.
-> Create a new Markdown cell
-> and enter the following:
->
-> ~~~
-> $\sum_{i=1}^{N} 2^{-i} \approx 1$
-> ~~~
->
-> (It's probably easier to copy and paste.)
-> What does it display?
-> What do you think the underscore, `_`, circumflex, `^`, and dollar sign, `$`, do?
-> 
-> > ## Solution
-> >
-> > The notebook shows the equation as it would be rendered from LaTeX equation syntax.
-> > The dollar sign, `$`, is used to tell Markdown that the text in between is a LaTeX equation.
-> > If you're not familiar with LaTeX,  underscore, `_`, is used for subscripts and circumflex, `^`, is used for superscripts.
-> > A pair of curly braces, `{` and `}`, is used to group text together so that the statement `i=1` becomes the subscript and `N` becomes the superscript.
-> > Similarly, `-i` is in curly braces to make the whole statement the superscript for `2`.
-> > `\sum` and `\approx` are LaTeX commands for "sum over" and "approximate" symbols. 
-> {: .solution}
-{: .challenge}
-
-## Closing JupyterLab
-
-*   From the Menu Bar select the "File" menu and then choose "Shut Down" at the bottom of the dropdown menu. You will be prompted to confirm that you wish to shutdown the JupyterLab server (don't forget to save your work!). Click "Shut Down" to shutdown the JupyterLab server.
-*   To restart the JupyterLab server you will need to re-run the following command from a shell.
+{: .language-python}
 
 ~~~
-$ jupyter lab
+“Getting started with Spyder”
+<class ‘str’>
 ~~~
+{: .output}
 
-> ## Closing JupyterLab
->
-> Practice closing and restarting the JupyterLab server.
-{: .challenge}
+~~~
+number = 75 # integer
+print(number)
+type(number)
+~~~
+{: .language-python}
 
-[anaconda]: https://docs.continuum.io/anaconda/install
-[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
-[jupyterlab-ui]: https://jupyterlab.readthedocs.io/en/stable/user/interface.html
-[jupyterlab-notebook-docs]: https://jupyterlab.readthedocs.io/en/stable/user/notebook.html
-[markdown]: https://en.wikipedia.org/wiki/Markdown
+~~~
+75
+<class ‘int’>
+~~~
+{: .output}
 
-{% include links.md %}
+~~~
+prob = 0.975 # float
+print(prob)
+type(prob)
+~~~
+{: .language-python}
+
+~~~
+0.975
+<class ‘float’>
+~~~
+{: .output}
+
+## Using Spyder as a calculator
+~~~
+3 + 2 # Addition
+5 * 6 # Multiplication
+2 ** 3 # Power
+~~~
+{: .language-python}
+
+~~~
+5
+30
+8
+~~~
+{: .output}
+
+## Comparison and logic operators
+~~~
+5 > 4 # Greater than
+3 == 3  # Equal to
+7 != 6  # Not Equal to
+
+~~~
+{: .language-python}
+
+~~~
+False
+True
+True
+~~~
+{: .output}
