@@ -8,12 +8,13 @@ questions:
 objectives:
 - "Launch Spyder" 
 - "Understand what an IDE is"
-- "Execute code from both the Editor and the Console"
+- "Understand that we can execute code from both the Editor and the Console"
 keypoints:
-- "Python scripts are plain text files."
+- "Python scripts are plain text files, that usually end in '.py'."
 - "Use the Spyder IDE for editing and running Python."
 - "Use the keyboard and mouse to select and edit cells."
 - "Scripts written in Spyder can be run from the command line."
+- "We won't cover running scripts from the command line now but do get in contact with your local eResearch Analyst to find out how."
 ---
 
 Many software developers will often use an integrated development environment (IDE) or a text editor to create and edit their Python programs which can be executed through the IDE or command line directly. 
@@ -94,7 +95,7 @@ or Windows.
 
 ## The Spyder IDE Interface
 
-You will see a toolbar and 3 panes when you first open Spyder. Working clockwise, the 3 panes are:
+You will see a menu bar, a toolbar and 3 panes when you first open Spyder. Working clockwise, the 3 panes are:
 
 * Editor, 
 * Help, Variable Explorer, Plots, Files, and 
@@ -104,9 +105,7 @@ You will see a toolbar and 3 panes when you first open Spyder. Working clockwise
   <img alt="Spyder IDE default layout" src="../fig/0_spyder_ide_layout.png" width="750"/>
 </p>
 
-<p style="background-color:yellow"> Maybe redo the screen shot to include the toolbar rather than the menu and include the Variable Explorer etc pane. Resolution looks a bit low but that could be a result of the embedding in the Word document.  </p>
-
-The menu on Macs is the same with the usual macOS variations, e.g., `Preferences` can be found under the Code menu item rather than under the Tools menu item as in Windows.
+The menu on Macs is the same with the usual macOS variations, e.g., `Preferences` can be found under the *Code* menu item rather than under the *Tools* menu item as in Windows.
 
 ### Editor (left panel)
 * The Editor pane is where we can view and write our Python code.
@@ -122,7 +121,7 @@ This panel has 4 tabs by default.
 
 ### IPython Console (bottom right)
 This pane has 2 tabs; IPython console and History, by default.
-* **IPython console** is an interactive contole/terminal which displays the content output by your code. You can also run Python commands in it interactively, separately from your code.
+* **IPython console** is an interactive console/terminal which displays the content output by your code. You can also run Python commands in it interactively, separately from your code.
 * **History** displays a list of commands that you have typed into the Console or run from the Editor.
 
 > ##  Spyder IDE Documentation
@@ -131,95 +130,17 @@ This pane has 2 tabs; IPython console and History, by default.
 > 
 {: .callout}
 
-<p style="background-color:yellow;padding:2em">
-27-July-2022 Pauline got up to here
-</p>
 
-## Running Programs in Spyder
+## Setting up a work-area
 
-Before you run your program in Spyder, it is essential to know your working directory.You can find this by looking at the path next to the folder icon in the top right of the Help section. To select a different working directory you can click on the folder icon and choose a different one.
+Before you run your program in Spyder, it is essential to know your working directory. You can find this by looking at the path next to the folder icon in the top right toolbar. To select a different working directory you can click on the folder icon and browse the folder structure.
 
-<p style="background-color:yellow;padding:2em">
-Insert screen shot here working dir
-</p>
+Change the current working directory to where you want to create your workshop files.
+Right-click inside the Files pane, create a data folder and copy the data files for these workshops into there.
 
-We can run programs in Spyder in two ways: line by line or the entire code at the same time.
-*   Type F5 to run the entire program 
-*   Type Ctrl + Enter (in Windows) or Control + Enter (In Mac) to run code one line at a time.
+Create another folder called scripts in which to store your scripts.
 
-Note: It is advisable to run the entire program as it helps in identifying and debugging errors easily.
+If we were generating output files we would create a folder for them and the same for documentation.
 
-Visit the [Spyder Key Combinations](https://keycombiner.com/collections/spyder/) web page for more keyboard shortcuts.
+### The benefits of relative paths
 
-## Sample Code Examples
-
-## Assign values to variables, print the variable and get the type
-~~~
-text = “Getting started with Spyder” # string
-print(text)
-type(text)
-~~~
-{: .language-python}
-
-~~~
-“Getting started with Spyder”
-<class ‘str’>
-~~~
-{: .output}
-
-~~~
-number = 75 # integer
-print(number)
-type(number)
-~~~
-{: .language-python}
-
-~~~
-75
-<class ‘int’>
-~~~
-{: .output}
-
-~~~
-prob = 0.975 # float
-print(prob)
-type(prob)
-~~~
-{: .language-python}
-
-~~~
-0.975
-<class ‘float’>
-~~~
-{: .output}
-
-## Using Spyder as a calculator
-~~~
-3 + 2 # Addition
-5 * 6 # Multiplication
-2 ** 3 # Power
-~~~
-{: .language-python}
-
-~~~
-5
-30
-8
-~~~
-{: .output}
-
-## Comparison and logic operators
-~~~
-5 > 4 # Greater than
-3 == 3  # Equal to
-7 != 6  # Not Equal to
-
-~~~
-{: .language-python}
-
-~~~
-False
-True
-True
-~~~
-{: .output}
